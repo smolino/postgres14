@@ -57,8 +57,8 @@ RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x
 ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/postgresql \
     ENABLED_COLLECTIONS=
 
-COPY root /
-COPY ./s2i/bin/ $STI_SCRIPTS_PATH
+#COPY root /
+#COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 
 # Not using VOLUME statement since it's not working in OpenShift Online:
 # https://github.com/sclorg/httpd-container/issues/30
