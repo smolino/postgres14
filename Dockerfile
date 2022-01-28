@@ -76,6 +76,7 @@ ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/postgresql \
 #    anyways) to assure that s2i process is actually able to _read_ the
 #    user-specified scripting.
 RUN usermod -a -G root postgres
+RUN restorecon -rv /var/lib/pgsql 
 #    /usr/libexec/fix-permissions --read-only "$APP_DATA"
 
 USER 26
