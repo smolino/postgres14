@@ -47,7 +47,7 @@ RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x
     yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum -y reinstall tzdata && \
-    yum -y clean all --enablerepo='*' && \
+#    yum -y clean all --enablerepo='*' && \
     localedef -f UTF-8 -i en_US en_US.UTF-8 && \
     test "$(id postgres)" = "uid=26(postgres) gid=26(postgres) groups=26(postgres)" && \
     mkdir -p /var/lib/pgsql/data && \
