@@ -42,8 +42,8 @@ EXPOSE 5432
 # safe in the future. This should *never* change, the last test is there
 # to make sure of that.
 RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm && \
-    INSTALL_PKGS="rsync tar gettext bind-utils nss_wrapper postgresql14-server postgresql14-contrib" && \
-    INSTALL_PKGS="$INSTALL_PKGS pgaudit" && \
+    INSTALL_PKGS="rsync tar gettext bind-utils postgresql14-server postgresql14-contrib" && \
+#    INSTALL_PKGS="$INSTALL_PKGS pgaudit" && \
     yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum -y reinstall tzdata && \
