@@ -82,5 +82,4 @@ RUN usermod -a -G root postgres
 
 USER 26
 
-# ENTRYPOINT ["container-entrypoint"]
-CMD ["run-postgresql"]
+# CMD ["run-postgresql"]
