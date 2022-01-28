@@ -75,7 +75,7 @@ ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/postgresql \
 # 2. we call fix-permissions on $APP_DATA here directly (UID=0 during build
 #    anyways) to assure that s2i process is actually able to _read_ the
 #    user-specified scripting.
-#RUN usermod -a -G root postgres && \
+RUN usermod -a -G root postgres
 #    /usr/libexec/fix-permissions --read-only "$APP_DATA"
 
 USER 26
