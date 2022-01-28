@@ -50,8 +50,8 @@ RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x
 #    yum -y clean all --enablerepo='*' && \
     localedef -f UTF-8 -i en_US en_US.UTF-8 && \
     test "$(id postgres)" = "uid=26(postgres) gid=26(postgres) groups=26(postgres)" && \
-    mkdir -p /var/lib/pgsql/data && \
-    /usr/libexec/fix-permissions /var/lib/pgsql /var/run/postgresql
+    mkdir -p /var/lib/pgsql/data
+#    /usr/libexec/fix-permissions /var/lib/pgsql /var/run/postgresql
 
 # Get prefix path and path to scripts rather than hard-code them in scripts
 ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/postgresql \
