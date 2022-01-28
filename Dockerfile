@@ -81,4 +81,5 @@ ENV CONTAINER_SCRIPTS_PATH=/usr/share/container-scripts/postgresql \
 USER 26
 
 ENTRYPOINT ["container-entrypoint"]
-CMD ["run-postgresql"]
+#CMD ["run-postgresql"]
+CMD ["/usr/pgsql-14/bin/postgres", "-D", "/var/lib/pgsql/data", "-c", "config_file=/var/lib/pgsql/data/postgresql.conf"]
