@@ -14,6 +14,8 @@ ENV POSTGRESQL_VERSION=14 \
     HOME=/var/lib/pgsql \
     PGUSER=postgres \
     APP_DATA=/opt/app-root
+    
+VOLUME /var/lib/pgsql
 
 ENV SUMMARY="PostgreSQL is an advanced Object-Relational database management system" \
     DESCRIPTION="PostgreSQL is an advanced Object-Relational database management system (DBMS). \
